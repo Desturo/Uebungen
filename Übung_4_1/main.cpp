@@ -14,6 +14,7 @@ int main() {
 		float random = (randomFloat(-1, 1) + randomFloat(-1, 1) + randomFloat(-1, 1)) / 3;
 		sum += random;
 		//std::cout << randomInt(20, 40) << std::endl;
+		std::cout << "Tesset";
 	}
 
 	std::cout << sum / 100 << std::endl;
