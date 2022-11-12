@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 
-int median(int *input, size_t arraySize);
+float median(int *input, size_t arraySize);
 
 float arithMean(int* input, size_t arraySize);
 
@@ -11,7 +11,7 @@ int mode(int* input, size_t arraySize);
 
 int main() {
 
-	int value[] = { 3, 5, 1, 2, 4, 5, 3, 2, 1, 2, 3, 4, 5, 6, 2 };
+	int value[] = { 3, 5, 1, 2, 4, 5, 3, 2, 1, 2, 3, 4, 5, 6, 2};
 	int arraySize = sizeof(value) / sizeof(value[0]);
 
 	std::cout << "Median: " << median(value, arraySize) << std::endl;
@@ -21,15 +21,24 @@ int main() {
 	return 200;
 }
 
-int median(int *input, size_t arraySize) {
+float median(int *input, size_t arraySize) {
+	int temp;
+	for (size_t i = 0; i < arraySize; i++) {
+		for (size_t j = i + 1; j < arraySize; j++) {
+			if (input[i] > input[j]) {
+				temp = input[i];
+				input[i] = input[j];
+				input[j] = temp;
+			}
+		}
+	}
 
 	if (arraySize % 2 != 0) {
 		return input[arraySize / 2];
 	}
 	else
 	{
-		std::cout << "Bitte geben Sie eine ungerade Zahl eine." << std::endl;
-		return 0;
+		return (input[arraySize / 2] + (input[arraySize / 2] - 1)) / 2;
 	}
 }
 
