@@ -1,6 +1,7 @@
 #include "Random.h"
 #include <time.h>
 #include <cstdlib>
+#include <random>
 
 float randomFloat(int min, int max) {	
 	int range = max - min;
@@ -10,4 +11,11 @@ float randomFloat(int min, int max) {
 int randomInt(int min, int max) {
 	int range = max - min;
 	return (std::rand() % max) + min;
+}
+
+
+float randFl(float floatMin, float floatMax) {
+	std::random_device rd;
+	std::uniform_real_distribution<float> dist(floatMin, floatMax);
+	return dist(rd);
 }
