@@ -161,7 +161,7 @@ void drawField(unsigned int playerPos[2], unsigned int enemyPos[2], unsigned int
 			}
 			else if (explo)
 			{
-				cout << "\260";
+				cout << char(178);
 			}
 			else if (enemyPos[0] == j && enemyPos[1] == i) {
 				cout << "E";

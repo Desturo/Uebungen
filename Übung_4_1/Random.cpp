@@ -10,7 +10,7 @@ float randomFloat(int min, int max) {
 
 int randomInt(int min, int max) {
 	int range = max - min;
-	return (std::rand() % max) + min;
+	return (std::rand() % range) + min;
 }
 
 

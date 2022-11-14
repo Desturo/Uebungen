@@ -10,10 +10,11 @@ int main() {
 	float sum = 0.f;
 	for (size_t i = 0; i < 100; i++)
 	{
-		float random = (randomFloat(-1, 1) + randomFloat(-1, 1) + randomFloat(-1, 1)) / 3;
+		float random = (randFl(-1, 1) + randFl(-1, 1) + randFl(-1, 1)) / 3;
 		sum += random;
+		std::cout << randomInt(20, 40) << std::endl;
 	}
 
-	std::cout << sum / 100 << std::endl;
+	std::cout << "Naeherung an 0: " << sum / 100 << std::endl;
 	return 200;
 }
