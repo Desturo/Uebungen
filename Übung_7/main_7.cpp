@@ -66,7 +66,7 @@ int main() {
 void FeldAnzeigen(std::string message)
 {
 	system("cls");
-	for (size_t koordinate = 0; koordinate < 25; koordinate++)
+	for (size_t koordinate = 0; koordinate < MAP_LENGHT; koordinate++)
 	{
 		if (koordinate == Lager->getPosition()) {
 			cout << DEPOT_CHAR;
@@ -86,7 +86,7 @@ void FeldAnzeigen(std::string message)
 	}
 
 	cout << endl;
-	for (size_t koordinate = 0; koordinate < 25; koordinate++)
+	for (size_t koordinate = 0; koordinate < MAP_LENGHT; koordinate++)
 	{
 		if (koordinate == Spieler->getPosition()) {
 			cout << char(194);
