@@ -4,6 +4,8 @@
 int main() {
 	while (true)
 	{
-		if (_kbhit()) std::cout << "Key: " << _getch() << std::endl;
+		if (_kbhit()) {
+			std::cout << "Key: " << _getch() << std::endl;
+		}
 	}
 }
