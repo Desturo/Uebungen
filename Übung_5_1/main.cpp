@@ -24,7 +24,7 @@ int main() {
 	unsigned long long gameTime = 0;
 	unsigned int points = 0;
 
-	unsigned int playerPos[] = { 15, 10 };
+	unsigned int playerPos[] = { 1, 1 };
 	unsigned int enemyPos[] = { 12, 12 };
 	//the third value is their time code, for knowing when they have to explode
 	unsigned int bombs[5][3] = { {0,0,0},{0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} };
@@ -129,14 +129,13 @@ int main() {
 
 void drawField(unsigned int playerPos[2], unsigned int enemyPos[2], unsigned int bombs[5][3], bool gameState, unsigned int explosion[7][7][2], unsigned int points) {
 	system("cls");
-	cout << setw(31) << std::setfill('-') << "-" << endl;
 	bool bomb = false;
 	bool explo = false;
 
+	cout << char(201) << setw(31) << std::setfill(char(205)) << char(187) << endl;
 	for (size_t i = 1; i <= 20; i++)
 	{
-		cout << "|";
-
+		cout << char(186);
 		for (size_t j = 1; j <= 30; j++)
 		{
 			for (size_t k = 0; k < 5; k++)
@@ -178,9 +177,11 @@ void drawField(unsigned int playerPos[2], unsigned int enemyPos[2], unsigned int
 			explo = false;
 		}
 			
-		cout << "|" << endl;
+		cout << char(186) << endl;
 	}
-	cout << setw(31) << std::setfill('-') << "-" << endl;
+	cout << char(200) << setw(31) << std::setfill(char(205)) << char(188) << endl;
+
+
 	cout << (gameState ? "Playing..." : "Game Over!") << " Points: " << points << endl;
 }
 
