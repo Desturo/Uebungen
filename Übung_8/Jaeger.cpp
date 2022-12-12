@@ -29,10 +29,10 @@ void Jaeger::Fliegen()
 
 void Jaeger::Feuern()
 {
-	m_kanonenStatus = FEUERN;
 	int counter = 3;
-	while (counter > 0 && m_munition >= m_munitionMax && m_kanonenStatus == BEREIT)
+	while (counter > 0 && m_munition > 0)
 	{
+		m_kanonenStatus = FEUERN;
 		sleep(1);
 		std::cout << "Feuer! ";
 		m_munition--;

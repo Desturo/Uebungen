@@ -4,7 +4,7 @@ class Depot
 private:
 	unsigned int m_position = 0;
 
-	unsigned int m_warenmaenge = 30;
+	unsigned int m_warenmaenge = 10;
 	unsigned int m_warengewicht = 1;
 	unsigned int m_warengroesse = 2;
 public:
